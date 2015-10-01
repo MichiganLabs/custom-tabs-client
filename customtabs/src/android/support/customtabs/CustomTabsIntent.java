@@ -16,7 +16,6 @@
 
 package android.support.customtabs;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -160,7 +159,7 @@ public final class CustomTabsIntent {
      * @param context The source Activity.
      * @param url The URL to load in the Custom Tab.
      */
-    public void launchUrl(Activity context, Uri url) {
+    public void launchUrl(Context context, Uri url) {
         intent.setData(url);
         if (startAnimationBundle != null){
             context.startActivity(intent, startAnimationBundle);
